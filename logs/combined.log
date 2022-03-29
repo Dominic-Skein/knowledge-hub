@@ -1,0 +1,596 @@
+{
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'mkdir',
+  path: 'c:\\Users\\USER\\Desktop\\kh\\knowledgehubpublic\\uploads\\image',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T08:10:06.369Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','9876565319','image/1648282206338_profile_picture.jpeg','test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T08:10:06.447Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','9876565319','image/1648282206338_profile_picture.jpeg','test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T08:10:06.449Z'
+}
+{
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'mkdir',
+  path: 'c:\\Users\\USER\\Desktop\\kh\\knowledgehubpublic\\uploads\\image',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T08:10:48.485Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','9876565313','image/1648282248434_profile_picture.jpeg','test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T08:10:48.648Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','9876565313','image/1648282248434_profile_picture.jpeg','test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T08:10:48.655Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','987656522','image/1648282357597_profile_picture.jpeg','test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T08:12:37.708Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','987656522','image/1648282357597_profile_picture.jpeg','test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T08:12:37.716Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','9876777777',NULL,'test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T08:22:33.125Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','9876777777',NULL,'test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T08:22:33.128Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:50:11.341Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'user_id')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:50:11.351Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:52:01.797Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'user_id')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:52:01.804Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:52:42.644Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'user_id')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:52:42.652Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:55:46.013Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'user_id')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:55:46.021Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:56:09.915Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'user_id')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:56:09.919Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:59:22.439Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'user_id')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:59:22.450Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:59:27.177Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'user_id')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:59:27.182Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:59:50.252Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'user_id')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T09:59:50.260Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T10:00:05.983Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'user_id')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T10:00:05.991Z'
+}
+{
+  message: 'DIRECTORY ALREADY EXISTS c:/Users/USER/Desktop/kh/knowledgehub/public/uploads/image',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T10:55:03.544Z'
+}
+{
+  message: 'Invalid base64 string',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T12:45:42.376Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','9042831738',NULL,'test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T12:45:49.753Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','9042831738',NULL,'test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-26T12:45:49.756Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','9042831738',NULL,'test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:05:12.825Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('test name','test designation','test experience','test intrers','test email','9042831738',NULL,'test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:05:12.836Z'
+}
+{
+  message: 'DIRECTORY ALREADY EXISTS c:/Users/USER/Desktop/kh/knowledgehub/public/uploads/image',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:05:47.555Z'
+}
+{
+  message: 'DIRECTORY ALREADY EXISTS c:/Users/USER/Desktop/kh/knowledgehub/public/uploads/image',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:06:31.619Z'
+}
+{
+  message: 'DIRECTORY ALREADY EXISTS c:/Users/USER/Desktop/kh/knowledgehub/public/uploads/image',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:10:17.397Z'
+}
+{
+  message: 'Invalid base64 string',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:16:53.555Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:36:47.582Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:36:47.593Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:36:59.981Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:36:59.989Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:38:14.319Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:38:14.329Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:39:27.881Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:39:27.892Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:40:19.284Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:40:19.293Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:40:54.395Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:40:54.408Z'
+}
+{
+  message: 'Invalid base64 string',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:41:04.130Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,feed_image,interests) VALUES ('feed summary','image/1648356111219_feed_image.jpeg','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:41:51.219Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,feed_image,interests) VALUES ('feed summary','image/1648356111219_feed_image.jpeg','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:41:51.222Z'
+}
+{
+  message: 'DIRECTORY ALREADY EXISTS c:/Users/USER/Desktop/kh/knowledgehub/public/uploads/image',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T04:41:51.226Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,feed_image,interests) VALUES ('feed summary','image/1648358186190_feed_image.jpeg','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T05:16:26.191Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,feed_image,interests) VALUES ('feed summary','image/1648358186190_feed_image.jpeg','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T05:16:26.198Z'
+}
+{
+  message: 'DIRECTORY ALREADY EXISTS c:/Users/USER/Desktop/kh/knowledgehub/public/uploads/image',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T05:16:26.201Z'
+}
+{
+  message: 'Invalid base64 string',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T05:23:16.221Z'
+}
+{
+  message: 'DIRECTORY ALREADY EXISTS c:/Users/USER/Desktop/kh/knowledgehub/public/uploads/image',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T05:23:53.880Z'
+}
+{
+  message: 'DIRECTORY ALREADY EXISTS c:/Users/USER/Desktop/kh/knowledgehub/public/uploads/image',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-27T05:27:35.988Z'
+}
+{
+  message: 'Invalid base64 string',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T06:09:02.647Z'
+}
+{
+  message: 'Invalid base64 string',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T06:09:19.335Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('Arasueswaran R','Flutter Developer','5 months','Flutter,Node','arasueswaran@gmail.com','9003833714',NULL,'test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T06:09:36.161Z'
+}
+{
+  message: "PREPARING INSERT INTO users (full_name,designation,work_experience,interests,email,mobile_no,profile_picture,fcm_token) VALUES ('Arasueswaran R','Flutter Developer','5 months','Flutter,Node','arasueswaran@gmail.com','9003833714',NULL,'test token')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T06:09:36.169Z'
+}
+{
+  message: 'Invalid base64 string',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T06:17:23.015Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T06:17:33.018Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (feed_summary,interests) VALUES ('feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T06:17:33.020Z'
+}
+{
+  message: 'Invalid base64 string',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T06:50:20.649Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (user_id,feed_summary,interests) VALUES ('2','feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T06:50:27.593Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (user_id,feed_summary,interests) VALUES ('2','feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T06:50:27.595Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:15:14.894Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:15:14.918Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:17:37.054Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:17:37.087Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:18:19.734Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:18:19.776Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:25:51.677Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:25:51.696Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:31:45.761Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:31:45.784Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:34:10.695Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:34:10.716Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:43:07.001Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:43:07.029Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:50:22.515Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:50:22.525Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:50:40.112Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:50:40.135Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:51:05.241Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:51:05.260Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:52:27.859Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:52:27.879Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:53:13.906Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:53:13.922Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:56:03.985Z'
+}
+{
+  message: "Cannot read properties of null (reading 'length')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T09:56:04.004Z'
+}
+{
+  message: 'PREPARING INSERT INTO feeds () VALUES ()',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T10:59:42.800Z'
+}
+{
+  message: 'PREPARING INSERT INTO feeds () VALUES ()',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T10:59:42.806Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (user_id,feed_summary,interests) VALUES ('2','feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T12:41:14.745Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (user_id,feed_summary,interests) VALUES ('2','feed summary','interests')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T12:41:14.751Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (user_id,feed_summary,interests) VALUES ('2','good evening team','skeinians')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T12:41:38.380Z'
+}
+{
+  message: "PREPARING INSERT INTO feeds (user_id,feed_summary,interests) VALUES ('2','good evening team','skeinians')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-03-28T12:41:38.382Z'
+}
