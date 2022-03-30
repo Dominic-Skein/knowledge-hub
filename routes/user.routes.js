@@ -20,6 +20,6 @@ router.put('/updateUser',FileUpload.base64ToImage("profile_picture","profile_pic
 router.get('/getuser',passport.authenticate('jwt',{session:false}),userController.getUser);
 
 //------------------------------------------deleteUser------------------------------------------------------//
-router.delete('/deleteuser',userController.deleteUser)
+router.delete('/deleteuser',passport.authenticate('jwt',{session:false}),userController.deleteUser)
 
 module.exports=router;

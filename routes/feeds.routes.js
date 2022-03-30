@@ -8,18 +8,18 @@ const FeedsModel = require('../models/feeds.Model');
  var router = express.Router();
 
  //---------------------------------------Add Feed-------------------------------------------------------------//
- router.post('/addfeed',FileUpload.base64ToImage("feed_image","feed_image"),feedController.addFeed);
+ router.post('/addfeed',passport.authenticate('jwt',{session:false}),FileUpload.base64ToImage("feed_image","feed_image"),feedController.addFeed);
 
  //--------------------------------------fetch feed-----------------------------------------------------------//
- router.get('/getfeed',feedController.gedFeed);
+ router.get('/getfeed',passport.authenticate('jwt',{session:false}),feedController.gedFeed);
 
  //---------------------------------------get all feed-------------------------------------------------------//
- router.get('/getallfeed',feedController.getAllfeed)
+ router.get('/getallfeed',passport.authenticate('jwt',{session:false}),feedController.getAllfeed)
 
  //--------------------------------------updated feed--------------------------------------------------------//
- router.put('/updatefeed',FileUpload.base64ToImage("feed_image","feed_image"),feedController.updateFeed);
+ router.put('/updatefeed',passport.authenticate('jwt',{session:false}),FileUpload.base64ToImage("feed_image","feed_image"),feedController.updateFeed);
 
  //--------------------------------------Delete Fedd--------------------------------------------------------//
- router.delete('/deletefeed',feedController.deleteFeed)
+ router.delete('/deletefeed',passport.authenticate('jwt',{session:false}),feedController.deleteFeed)
 
  module.exports = router;
