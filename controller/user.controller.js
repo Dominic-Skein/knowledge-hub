@@ -101,14 +101,14 @@ const userController={
 
         if(mobile_no.length){
         var UserData = await UserModal.LoginUser({mobile_no})
-        //console.log("--------------->",UserData[0].length)
+        console.log("--------------->",UserData[0])
         if(UserData[0].length){
             let payload ={
                 "user_id":UserData[0][0].user_id,
                 "full_name":UserData[0][0].full_name,
                 "designation":UserData[0][0].designation,
                 "work_experience":UserData[0][0].work_experience,
-                "interestes":UserData[0][0].interestes,
+                "interestes":UserData[0][0].interests,
                 "email":UserData[0][0].email,
                 "mobile_no":UserData[0][0].mobile_no,
                 "fcm_token":UserData[0][0].fcm_token
