@@ -29,6 +29,14 @@ const FeedsModel = {
     async DeleteFeed(data){
         let query = `delete from feeds where feed_id = ${data}`
         return database.promise().query(query)
+    },
+    async AddFeedLike(data){
+        let query = QueryGenerator.insert('feed_likes',data) 
+        return database.promise().query(query)
+    },
+    async DeleteFeedLike(data){
+        let query = `delete from feed_likes where feed_like_id = ${data}`
+        return database.promise().query(query)
     }
 }
 

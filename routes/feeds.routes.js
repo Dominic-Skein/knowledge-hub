@@ -22,4 +22,10 @@ const FeedsModel = require('../models/feeds.Model');
  //--------------------------------------Delete Fedd--------------------------------------------------------//
  router.delete('/deletefeed',passport.authenticate('jwt',{session:false}),feedController.deleteFeed)
 
+ //---------------------------------------feed like add-----------------------------------------------------//
+ router.post('/addfeedlike',passport.authenticate('jwt',{session:false}),feedController.addFeedLike)
+
+ //---------------------------------------feed like add-----------------------------------------------------//
+ router.delete('/deletefeedlike',passport.authenticate('jwt',{session:false}),feedController.deleteFeedLike)
+
  module.exports = router;

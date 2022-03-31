@@ -110,6 +110,43 @@ async deleteFeed(req,res){
          new SpErrorHandler(res, err)    
     }
 
+},
+async addFeedLike(req,res){
+    try{
+        let { user_id,feed_id,click_user_id }= req.body
+        let add_Feed_Like = await FeedsModel.AddFeedLike(req.body); 
+        if(add_Feed_Like[0].affectedRows){
+            new Response(res)._SuccessResponseWithoutData("Feed Like Added Successfully...");
+        }
+        else{
+            new Response(res)._ErrorMessage("Feed Like was Not created.....")
+        }
+    }
+    catch(err){
+          /**
+         * Handling err response
+         */
+           new SpErrorHandler(res, err) 
+    }
+},
+async deleteFeedLike(req,res){
+try{
+    let {feed_like_id} = req.query;
+    
+    let feedlikedelete = await FeedsModel.DeleteFeedLike(feed_like_id);
+    if(feedlikedelete[0].affectedRows){
+        new Response(res)._SuccessResponseWithoutData("Feed like was Deleted Successfully....!",)
+    }
+    else{
+        new Response(res)._ErrorMessage("Feed like Was Not Deleted.....!")
+    }
+}    
+catch(err){
+     /**
+         * Handling err response
+         */
+      new SpErrorHandler(res, err) 
+}
 }
 }
 module.exports=feedController;
