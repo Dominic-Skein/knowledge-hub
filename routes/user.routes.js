@@ -19,6 +19,9 @@ router.put('/updateUser',FileUpload.base64ToImage("profile_picture","profile_pic
 //------------------------------------------GetUser----------------------------------------------------------//
 router.get('/getuser',passport.authenticate('jwt',{session:false}),userController.getUser);
 
+//------------------------------------------GetAllUser----------------------------------------------------------//
+router.get('/getalluser',passport.authenticate('jwt',{session:false}),userController.getAllUser);
+
 //------------------------------------------deleteUser------------------------------------------------------//
 router.delete('/deleteuser',passport.authenticate('jwt',{session:false}),userController.deleteUser)
 

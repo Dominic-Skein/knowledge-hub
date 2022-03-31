@@ -219,6 +219,29 @@ const userController={
          new SpErrorHandler(res, err)    
     }
     },
+    async getAllUser(req,res){
+        try{
+            let getAllUser = await UserModal.GetAllUser();
+            if(getAllUser[0].length){
+                new Response(res)._SuccessResponseWithData(Message.Getuser.SuccessMessage.fetch,getAllUser[0])
+            }
+            else{
+                new Response(
+                    res,
+                    StatusCodes.BAD_REQUEST
+                )._ErrorMessage(
+                    Message.Getuser.FailureMessage.fetch
+                    )   
+            }
+        }
+        catch(err){
+            
+        /**
+         * Handling err response
+         */
+         new SpErrorHandler(res, err)    
+        }
+    },
     async deleteUser(req,res){
     try{
      let {user_id} = req.query;

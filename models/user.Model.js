@@ -19,6 +19,9 @@ const UserModel = {
         return query = await database.promise().query(`select * from users where mobile_no =${data.mobile_no}`);    
         }
     },
+    async GetAllUser(){
+        return query = await database.promise().query(`select * from users order by user_id`);
+    },
     async updateUser(data){
         let query = `update users set full_name = '${data.full_name}', designation = '${data.designation}' ,work_experience = '${data.work_experience}' ,interests = '${data.interests}' ,email = '${data.email}' ,mobile_no = '${data.mobile_no}' ,profile_picture = '${data.profile_picture}' ,fcm_token = '${data.fcm_token}' where user_id = ${data.user_id}`;
         console.log(query)
