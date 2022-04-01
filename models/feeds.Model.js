@@ -14,12 +14,12 @@ const FeedsModel = {
         }
 
         if(data.interests){
-        let query = `select * from feeds where interests in ("${data.interests}")`
+        let query = `select * from feeds where interests in ("${data.interests} order by created_at DESC")`
         return database.promise().query(query)
         }
     },
     async getAllfeed(){
-        let query = `select * from feeds order by created_at`;
+        let query = `select * from feeds order by created_at DESC`;
         return database.promise().query(query);
     },
     async UpateFeed(data){
