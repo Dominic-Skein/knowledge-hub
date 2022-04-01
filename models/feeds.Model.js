@@ -14,7 +14,7 @@ const FeedsModel = {
         }
 
         if(data.interests){
-        let query = `select * from feeds where interests in ("${data.interests} order by created_at DESC")`
+        let query = `select * from feeds where interests like "${data.interests} order by created_at DESC")`
         return database.promise().query(query)
         }
     },

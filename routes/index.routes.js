@@ -12,4 +12,9 @@ router.use('/users',UserRouter);
 var FeedRouter = require('./feeds.routes');
 router.use('/feeds',FeedRouter)
 
+//-----------------comments----------------------//
+
+var CommentsRouter = require('./comments.routes');
+router.use('/comments',CommentsRouter);
+
 module.exports=router;
