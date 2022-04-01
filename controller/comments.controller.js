@@ -72,6 +72,7 @@ async deleteComment(req,res){
 async updateComments(req,res){
     try{
         let {feed_comment_id} = req.query;
+
         let {user_id,feed_id,click_user_id,comment} = req.body;
             let feedData = {
             "feed_comment_id":feed_comment_id,
@@ -80,7 +81,9 @@ async updateComments(req,res){
             "click_user_id":click_user_id,
             "comment":comment
         }
-        let [updatecomment] = await commentsModal.UpateFeed(feedData);
+        
+
+        let [updatecomment] = await commentsModal.Upatecomment(feedData)
         if(updatecomment.affectedRows){
             new Response(res)._SuccessResponseWithoutData("Feed updated Successfully...!")
         }

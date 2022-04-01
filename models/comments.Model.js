@@ -7,9 +7,13 @@ const CommentsModel = {
         let query = QueryGenerator.insert('feed_comments',data) 
         return database.promise().query(query)
     },
+    async Upatecomment(data){
+        let query = `update feed_comments set user_id = '${data.user_id}', feed_id = '${data.feed_id}', click_user_id = '${data.click_user_id}', comment = '${data.comment}' where feed_comment_id = ${data.feed_comment_id}`
+        console.log("query------------->",query)
+        return database.promise().query(query)
+    },
     async GetComment(data){
         let query = `select * from feed_comments where feed_id = ${data}`;
-        console.log("query---->",query)
         return database.promise().query(query)
         
     },
