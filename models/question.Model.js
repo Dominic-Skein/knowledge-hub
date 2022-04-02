@@ -14,19 +14,31 @@ const QuestionModel = {
     async GetQuestion(data){
 
         if(data.question_id){
-        let query = `select * from questions where question_id = ${data.question_id}`
+        let query = `select q.question_id,q.question_summary,q.question_summary,q.question_image,q.interests,q.user_id,q.question_views, (select count (*) from questions_likes l where l.questions_id = q.question_id) as question_likes from questions q where question_id = ${data.question_id}`
         return database.promise().query(query)
         }
 
         if(data.interests){
-        let query = `select f.question_id,f.question_summary,f.question_image,f.interests,user_id,question_views, (select count(*) from questions_likes c where c.question_id = f.question_id) as question_likes from questions f where interests like "%${data.interests}%" order by created_at DESC`;
+        let query = `select q.question_id,q.question_summary,q.question_image,q.interests,q.user_id,q.question_views, (select count (*) from questions_likes l where l.questions_id = q.question_id) as question_likes from questions q where interests like "%${data.interests}%" order by created_at DESC`;
         return database.promise().query(query)
         }
+    },
+    async getAllQuestion(){
+        let query = `select * from questions order by created_at DESC`;
+        return database.promise().query(query);
     },
     async DeleteQuestion(data){
         let query = `delete from questions where question_id = ${data}`
         return database.promise().query(query)
     },
+    async AddQuestionLike(data){
+        let query = QueryGenerator.insert('questions_likes',data) 
+        return database.promise().query(query)
+    },
+    async DeleteQuestionLike(data){
+        let query = `delete from questions_likes where questions_like_id = ${data}`
+        return database.promise().query(query)
+    }
 }
 
 module.exports = QuestionModel

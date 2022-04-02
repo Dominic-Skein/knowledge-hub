@@ -14,8 +14,17 @@ router.put('/updatequestion',passport.authenticate('jwt',{session:false}),FileUp
 //----------------------get Question-----------------------------//
 router.get('/getquestion',passport.authenticate('jwt',{session:false}),QuestionsController.getQuestion)
 
- //--------------------------------------Delete Fedd--------------------------------------------------------//
+ //---------------------------------------get all feed-------------------------------------------------------//
+ router.get('/getallquestion',passport.authenticate('jwt',{session:false}),QuestionsController.getAllQuestion)
+
+ //--------------------------------------Delete Feed--------------------------------------------------------//
  router.delete('/deletequestion',passport.authenticate('jwt',{session:false}),QuestionsController.deleteQuestion)
+
+ //---------------------------------------question like add-----------------------------------------------------//
+ router.post('/addquestionlike',passport.authenticate('jwt',{session:false}),QuestionsController.addQuestionLike)
+
+ //---------------------------------------question like add-----------------------------------------------------//
+ router.delete('/deletequestionlike',passport.authenticate('jwt',{session:false}),QuestionsController.deleteQuestionLike)
 
 
 module.exports = router;
