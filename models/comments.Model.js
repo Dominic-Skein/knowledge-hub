@@ -20,7 +20,24 @@ const CommentsModel = {
     async DeleteComments(data){
         let query = `delete from feed_comments where feed_comment_id = ${data}`
         return database.promise().query(query)
-    }
+    },
+    async AddAnswer(data){
+        let query = QueryGenerator.insert('questions_comments',data) 
+        return database.promise().query(query)
+    },
+    async GetAnswer(data){
+        let query = `select * from questions_comments where questions_id = ${data}`;
+        return database.promise().query(query)
+    },
+    async DeleteAnswer(data){
+        let query = `delete from questions_comments where feed_comment_id = ${data}`
+        return database.promise().query(query)
+    },
+    async AnswerUpdate(data){
+        let query = `update questions_comments set user_id = '${data.user_id}', questions_id = '${data.questions_id}', click_user_id = '${data.click_user_id}', comment = '${data.comment}' where question_comment_id = ${data.question_comment_id}`
+        console.log("query------------->",query)
+        return database.promise().query(query)
+    },
 }
 
 module.exports = CommentsModel

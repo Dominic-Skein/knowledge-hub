@@ -19,4 +19,17 @@ router.delete('/deletecomments',passport.authenticate('jwt',{session:false}),com
 //----------------------------------------update comments---------------------------------------------------------//
 router.put('/updatecomment',passport.authenticate('jwt',{session:false}),commentsController.updateComments)
 
+//---------------------------------------Add Answer-------------------------------------------------------------//
+router.post('/addanswer',passport.authenticate('jwt',{session:false}),commentsController.addAnswer);
+
+//----------------------------------------get Answer-----------------------------------------------------------//
+router.get('/getanswer',passport.authenticate('jwt',{session:false}),commentsController.getAnswer)
+
+//---------------------------------------delete comments----------------------------------------------------------//
+router.delete('/deleteanswer',passport.authenticate('jwt',{session:false}),commentsController.deleteAnswer);
+
+//----------------------------------------update comments---------------------------------------------------------//
+router.put('/updateanswer',passport.authenticate('jwt',{session:false}),commentsController.updateAnswer)
+
+
 module.exports = router;

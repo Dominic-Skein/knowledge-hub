@@ -594,3 +594,261 @@
   label: undefined,
   timestamp: '2022-03-28T12:41:38.382Z'
 }
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,question_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:23:25.642Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,question_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:23:25.646Z'
+}
+{
+  message: "Unknown column 'question_id' in 'field list'",
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "INSERT INTO questions_comments (user_id,question_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'question_id' in 'field list'",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:23:25.697Z'
+}
+{
+  message: "Unknown column 'question_id' in 'field list'",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:23:25.707Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,question_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:23:27.025Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,question_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:23:27.027Z'
+}
+{
+  message: "Unknown column 'question_id' in 'field list'",
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "INSERT INTO questions_comments (user_id,question_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'question_id' in 'field list'",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:23:27.030Z'
+}
+{
+  message: "Unknown column 'question_id' in 'field list'",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:23:27.039Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:23:39.633Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:23:39.634Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:24.471Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:24.472Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:24.840Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','1','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:24.842Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','2','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:32.118Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','2','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:32.119Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','2','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:32.448Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','2','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:32.449Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','3','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:38.005Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','3','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:38.007Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','3','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:38.288Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','3','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:38.289Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','3','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:38.603Z'
+}
+{
+  message: "PREPARING INSERT INTO questions_comments (user_id,questions_id,click_user_id,comment) VALUES ('1','3','1','test')",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:32:38.604Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:34:10.135Z'
+}
+{
+  message: 'feed_id is not defined',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:34:10.141Z'
+}
+{
+  message: "Unknown column 'feed_id' in 'where clause'",
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: 'select * from questions_comments where feed_id = 3',
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'feed_id' in 'where clause'",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:34:31.595Z'
+}
+{
+  message: "Unknown column 'feed_id' in 'where clause'",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:34:31.613Z'
+}
+{
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:38:00.193Z'
+}
+{
+  message: 'feed_comment_id is not defined',
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:38:00.204Z'
+}
+{
+  message: "Table 'knowledge_hub.question_comments' doesn't exist",
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sql: "update question_comments set user_id = '1', feed_id = 'undefined', click_user_id = '1', comment = 'comments' where question_comment_id = 3",
+  sqlState: '42S02',
+  sqlMessage: "Table 'knowledge_hub.question_comments' doesn't exist",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:40:50.550Z'
+}
+{
+  message: {
+    code: 'ER_NO_SUCH_TABLE',
+    errno: 1146,
+    fatal: undefined,
+    sql: "update question_comments set user_id = '1', feed_id = 'undefined', click_user_id = '1', comment = 'comments' where question_comment_id = 3",
+    sqlState: '42S02',
+    sqlMessage: "Table 'knowledge_hub.question_comments' doesn't exist"
+  },
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:40:50.558Z'
+}
+{
+  message: "Table 'knowledge_hub.question_comments' doesn't exist",
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sql: "update question_comments set user_id = '1', feed_id = '2', click_user_id = '1', comment = 'comments' where question_comment_id = 3",
+  sqlState: '42S02',
+  sqlMessage: "Table 'knowledge_hub.question_comments' doesn't exist",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:41:14.707Z'
+}
+{
+  message: {
+    code: 'ER_NO_SUCH_TABLE',
+    errno: 1146,
+    fatal: undefined,
+    sql: "update question_comments set user_id = '1', feed_id = '2', click_user_id = '1', comment = 'comments' where question_comment_id = 3",
+    sqlState: '42S02',
+    sqlMessage: "Table 'knowledge_hub.question_comments' doesn't exist"
+  },
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:41:14.709Z'
+}
+{
+  message: "Unknown column 'feed_id' in 'field list'",
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "update questions_comments set user_id = '1', feed_id = '2', click_user_id = '1', comment = 'comments' where question_comment_id = 3",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'feed_id' in 'field list'",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:41:56.098Z'
+}
+{
+  message: "Unknown column 'feed_id' in 'field list'",
+  level: 'info',
+  label: undefined,
+  timestamp: '2022-04-02T08:41:56.111Z'
+}
