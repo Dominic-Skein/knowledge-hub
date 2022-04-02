@@ -161,11 +161,11 @@ async updateAnswer(req,res){
     try{
         let {question_comment_id} = req.query;
 
-        let {user_id,question_id,click_user_id,comment} = req.body;
+        let {user_id,questions_id,click_user_id,comment} = req.body;
             let feedData = {
             "question_comment_id":question_comment_id,
             "user_id":user_id,
-            "feed_id":question_id,
+            "questions_id":questions_id,
             "click_user_id":click_user_id,
             "comment":comment
         }
