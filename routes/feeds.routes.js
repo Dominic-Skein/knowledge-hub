@@ -2,7 +2,6 @@
  const feedController = require('../controller/feeds.controller');
  const FileUpload = require('../utils/file');
  const passport = require('passport');
-const FeedsModel = require('../models/feeds.Model');
 
  // router instance
  var router = express.Router();

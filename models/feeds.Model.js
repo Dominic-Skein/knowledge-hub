@@ -14,7 +14,7 @@ const FeedsModel = {
         }
 
         if(data.interests){
-        let query = `select * from feeds where interests like "${data.interests} order by created_at DESC")`
+        let query = `select f.feed_id,f.feed_summary,f.feed_image,f.interests,user_id, (select count(*) from feed_likes c where c.feed_id = f.feed_id) as feed_likes from feeds f where interests like "%${data.interests}%" order by created_at DESC`;
         return database.promise().query(query)
         }
     },
