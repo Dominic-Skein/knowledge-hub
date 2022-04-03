@@ -9,17 +9,17 @@ const FeedsModel = {
     async GetFeed(data){
 
         if(data.feed_id){
-        let query = `select f.feed_id,f.feed_summary,f.feed_image,f.interests,f.user_id,(select count(*) from feed_likes c where c.feed_id = f.feed_id) as feed_likes, (select count (*) from feed_comments m where m.feed_id = f.feed_id) as feed_comments from feeds f where f.feed_id = ${data.feed_id}`
+        let query = `select f.feed_id,f.feed_summary,f.feed_image,f.interests,f.user_id,f.created_at,f.updated_at,(select count(*) from feed_likes c where c.feed_id = f.feed_id) as feed_likes, (select count (*) from feed_comments m where m.feed_id = f.feed_id) as feed_comments from feeds f where f.feed_id = ${data.feed_id}`
         return database.promise().query(query)
         }
 
         if(data.interests){
-        let query = `select f.feed_id,f.feed_summary,f.feed_image,f.interests,f.user_id, (select count(*) from feed_likes c where c.feed_id = f.feed_id) as feed_likes, (select count (*) from feed_comments m where m.feed_id = f.feed_id) as feed_comments from feeds f where interests like "%${data.interests}%" order by created_at DESC`;
+        let query = `select f.feed_id,f.feed_summary,f.feed_image,f.interests,f.user_id,f.created_at,f.updated_at,(select count(*) from feed_likes c where c.feed_id = f.feed_id) as feed_likes, (select count (*) from feed_comments m where m.feed_id = f.feed_id) as feed_comments from feeds f where interests like "%${data.interests}%" order by created_at DESC`;
         return database.promise().query(query)
         }
     },
     async getAllfeed(){
-        let query = `select f.feed_id,f.feed_summary,f.feed_image,f.interests,f.user_id, (select count(*) from feed_likes c where c.feed_id = f.feed_id) as feed_likes, (select count (*) from feed_comments m where m.feed_id = f.feed_id) as feed_comments from feeds f order by created_at DESC`;
+        let query = `select f.feed_id,f.feed_summary,f.feed_image,f.interests,f.user_id,f.created_at,f.updated_at,(select count(*) from feed_likes c where c.feed_id = f.feed_id) as feed_likes, (select count (*) from feed_comments m where m.feed_id = f.feed_id) as feed_comments from feeds f order by created_at DESC`;
         return database.promise().query(query);
     },
     async UpateFeed(data){

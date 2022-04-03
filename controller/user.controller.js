@@ -53,7 +53,7 @@ const userController={
                     "full_name":getUser[0][0].full_name,
                     "designation":getUser[0][0].designation,
                     "work_experience":getUser[0][0].work_experience,
-                    "interestes":getUser[0][0].interestes,
+                    "interests":getUser[0][0].interests,
                     "email":getUser[0][0].email,
                     "mobile_no":getUser[0][0].mobile_no,
                     "fcm_token":getUser[0][0].fcm_token
