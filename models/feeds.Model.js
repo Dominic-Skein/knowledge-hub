@@ -35,7 +35,7 @@ const FeedsModel = {
         return database.promise().query(query)
     },
     async DeleteFeedLike(data){
-        let query = `delete from feed_likes where feed_like_id = ${data}`
+        let query = `delete from feed_likes where click_user_id = ${data}`
         return database.promise().query(query)
     }
 }

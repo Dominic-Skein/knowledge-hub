@@ -33,7 +33,6 @@ async getcomment(req,res){
     try{
         let { feed_id } = req.query;
 
-        console.log("~~~~~~~~~~~~~~~~~~~>>>>>>",feed_id)
         let getcomment = await commentsModal.GetComment(feed_id);
         if(getcomment[0].length){
             new Response(res)._SuccessResponseWithData("Feed was fetched successfully....!",getcomment[0])

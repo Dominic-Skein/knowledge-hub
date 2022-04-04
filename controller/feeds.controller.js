@@ -131,9 +131,9 @@ async addFeedLike(req,res){
 },
 async deleteFeedLike(req,res){
 try{
-    let {feed_like_id} = req.query;
+    let {click_user_id} = req.query;
     
-    let feedlikedelete = await FeedsModel.DeleteFeedLike(feed_like_id);
+    let feedlikedelete = await FeedsModel.DeleteFeedLike(click_user_id);
     if(feedlikedelete[0].affectedRows){
         new Response(res)._SuccessResponseWithoutData("Feed like was Deleted Successfully....!",)
     }
