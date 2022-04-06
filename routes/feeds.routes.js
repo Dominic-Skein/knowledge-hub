@@ -24,6 +24,9 @@
  //---------------------------------------feed like add-----------------------------------------------------//
  router.post('/addfeedlike',passport.authenticate('jwt',{session:false}),feedController.addFeedLike)
 
+ //----------------------------------------get feed like---------------------------------------------------//
+ router.get('/getfeedlike',passport.authenticate('jwt',{session:false}),feedController.getFeedLike)
+
  //---------------------------------------feed like add-----------------------------------------------------//
  router.delete('/deletefeedlike',passport.authenticate('jwt',{session:false}),feedController.deleteFeedLike)
 

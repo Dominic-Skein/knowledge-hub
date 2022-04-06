@@ -147,6 +147,22 @@ catch(err){
          */
       new SpErrorHandler(res, err) 
 }
+},
+async getFeedLike(req,res){
+    try{
+    let { feed_id } = req.query
+        let getFeed = await FeedsModel.GetFeedLike(feed_id)
+        console.log(getFeed[0])
+        if(getFeed[0].length){
+            new Response(res)._SuccessResponseWithData("All Feed Likes was fetched successfully....!",getFeed[0])
+        }
+        else{
+            new Response(res)._ErrorMessage("Feed Like was Fetched Failed...!")
+        }
+    }
+    catch(err){
+        new SpErrorHandler(res, err)
+    }
 }
 }
 module.exports=feedController;
