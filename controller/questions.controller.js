@@ -146,6 +146,23 @@ async deleteQuestionLike(req,res){
              */
           new SpErrorHandler(res, err) 
     }
+    },
+async getQuestionLike(req,res){
+        try{
+        let { question_id } = req.query
+            let getQuestionLike = await QuestionsModal.GetQuestionLike(question_id)
+            console.log(getQuestionLike[0])
+            if(getQuestionLike[0].length){
+                new Response(res)._SuccessResponseWithData("All Questions Likes was fetched successfully....!",getQuestionLike[0])
+            }
+            else{
+                new Response(res)._ErrorMessage("Question Like was Fetched Failed...!")
+            }
+        }
+        catch(err){
+            new SpErrorHandler(res, err)
+        }
     }
+
 }
 module.exports = qustionsController

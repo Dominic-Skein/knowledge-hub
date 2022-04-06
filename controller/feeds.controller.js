@@ -10,7 +10,7 @@ const e = require("express");
 const feedController={
 async addFeed(req,res){
     try{
-    let {feed_summary,feed_image,interests,user_id} = req.body
+    let {feed_summary,feed_image,interests,user_id,feed_views} = req.body
 
     let addFeed = await FeedsModel.AddFeed(req.body);
     if(addFeed[0].affectedRows){

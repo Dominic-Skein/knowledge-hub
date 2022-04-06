@@ -13,7 +13,7 @@ const CommentsModel = {
         return database.promise().query(query)
     },
     async GetComment(data){
-        let query = `select * from feed_comments where feed_id = ${data}`;
+        let query = `select * from feed_comments c inner join users u on c.user_id = u.user_id where feed_id = ${data}`;
         return database.promise().query(query)
         
     },
@@ -26,7 +26,7 @@ const CommentsModel = {
         return database.promise().query(query)
     },
     async GetAnswer(data){
-        let query = `select * from questions_comments where questions_id = ${data}`;
+        let query =`select * from questions_comments q inner join users u on q.user_id = u.user_id where q.questions_id = ${data}`
         return database.promise().query(query)
     },
     async DeleteAnswer(data){

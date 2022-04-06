@@ -31,11 +31,17 @@ const QuestionModel = {
         return database.promise().query(query)
     },
     async AddQuestionLike(data){
+        console.log("query data---------------------------->",data)
         let query = QueryGenerator.insert('questions_likes',data) 
         return database.promise().query(query)
     },
     async DeleteQuestionLike(data){
         let query = `delete from questions_likes where questions_like_id = ${data}`
+        return database.promise().query(query)
+    },
+    async GetQuestionLike(data){
+        let query =`select * from questions_likes f inner join users u on f.user_id = u.user_id where f.questions_id = ${data}`
+         console.log(query)
         return database.promise().query(query)
     }
 }

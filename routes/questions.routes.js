@@ -26,5 +26,7 @@ router.get('/getquestion',passport.authenticate('jwt',{session:false}),Questions
  //---------------------------------------question like add-----------------------------------------------------//
  router.delete('/deletequestionlike',passport.authenticate('jwt',{session:false}),QuestionsController.deleteQuestionLike)
 
+ //----------------------------------------question get------------------------------------------------------//
+ router.get('/getQuestionLike',passport.authenticate('jwt',{session:false}),QuestionsController.getQuestionLike)
 
 module.exports = router;
