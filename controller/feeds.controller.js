@@ -32,7 +32,9 @@ async addFeed(req,res){
 async gedFeed(req,res){
     try{
     let { feed_id,interests } = req.query;
-    let getFeed = await FeedsModel.GetFeed(req.query);
+    console.log(req.user);
+    const user_id = req.user.user_id
+    let getFeed = await FeedsModel.GetFeed({ feed_id,interests,user_id});
     if(getFeed[0].length){
         new Response(res)._SuccessResponseWithData("Feed was fetched successfully....!",getFeed[0])
     }
