@@ -31,9 +31,20 @@ async addFeed(req,res){
 
 async gedFeed(req,res){
     try{
-    let { feed_id,interests } = req.query;
+    let { feed_id,interests,page_no } = req.query;
     console.log(req.user);
     const user_id = req.user.user_id
+    // if(page_no){
+    //     for(i=0; i<=page_no;i++){
+    //         let getFeed = await FeedsModel.GetFeed({interests});    
+    //         if(getFeed[0].length){
+    //             new Response(res)._SuccessResponseWithData("Feed was fetched successfully....!",getFeed[0])
+    //         }
+    //         else{
+    //             new Response(res)._ErrorMessage("Feed was Fetched Failed...!")
+    //         }    
+    //     }
+    // }
     let getFeed = await FeedsModel.GetFeed({ feed_id,interests,user_id});
     if(getFeed[0].length){
         new Response(res)._SuccessResponseWithData("Feed was fetched successfully....!",getFeed[0])

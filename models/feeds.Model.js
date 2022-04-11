@@ -11,6 +11,7 @@ const FeedsModel = {
         if(feed_id){
             
         let query = `select f.feed_id,f.feed_summary,f.feed_image,f.interests,f.user_id,f.created_at,f.updated_at,(SELECT click_user_id FROM feed_likes c where c.feed_id = f.feed_id AND c.click_user_id=${user_id}) as liked_user,(select count(*) from feed_likes c where c.feed_id = f.feed_id) as feed_likes, (select count (*) from feed_comments m where m.feed_id = f.feed_id) as feed_comments from feeds f where f.feed_id = ${feed_id}`
+       
         return database.promise().query(query)
         }
 
@@ -19,9 +20,8 @@ const FeedsModel = {
 
         // let query = `select * ,(select IF(user_id IS NULL, FALSE, TRUE)as liked from feed_likes c where c.click_user_id=${user_id}) (select count(*) from feed_likes c where c.feed_id = f.feed_id) as feed_likes,(select count(*) from feed_comments m where m.feed_id = f.feed_id) as feed_comments from feeds f inner join users u on u.user_id = f.user_id where f.interests like "%${interests}%"`
         let query = `select * ,(SELECT click_user_id FROM feed_likes c where c.feed_id = f.feed_id AND c.click_user_id=${user_id}) as liked_user,(select count(*) from feed_likes c where c.feed_id = f.feed_id) as feed_likes,(select count(*) from feed_comments m where m.feed_id = f.feed_id) 
-        as feed_comments from feeds f inner join users u on u.user_id = f.user_id where f.interests like "${interests}"
+        as feed_comments from feeds f inner join users u on u.user_id = f.user_id where f.interests like "[%${interests}%]"
         `
-
         return database.promise().query(query)
         }
     },
