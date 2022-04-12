@@ -115,15 +115,19 @@ async deleteQuestion(req,res){
 },
 async addQuestionLike(req,res){
     try{
-        let { user_id,question_id,click_user_id }= req.body
-        checkusrlike = await QuestionModel.checkQuestionLike(question_id,click_user_id)
-        console.log("checked user likeeeeee------------>",checkusrlike)
-        let add_question_Like = await QuestionsModal.AddQuestionLike(req.body); 
-        if(add_question_Like[0].affectedRows){
-            new Response(res)._SuccessResponseWithoutData("question Like Added Successfully...");
+        let { user_id,questions_id,click_user_id }= req.body
+      let [checkusrlike] = await QuestionModel.checkQuestionLike(questions_id,click_user_id)
+        if(checkusrlike.length){
+            new Response(res)._ErrorMessage("question Like was already added.....")
         }
         else{
-            new Response(res)._ErrorMessage("question Like was Not created.....")
+            let add_question_Like = await QuestionsModal.AddQuestionLike(req.body); 
+            if(add_question_Like[0].affectedRows){
+                new Response(res)._SuccessResponseWithoutData("question Like Added Successfully...");
+            }
+            else{
+                new Response(res)._ErrorMessage("question Like was Not created.....")
+            }
         }
     }
     catch(err){
