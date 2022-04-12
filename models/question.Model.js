@@ -18,7 +18,8 @@ const QuestionModel = {
         }
 
         if(data.interests){
-        let query = `select q.question_id,q.question_summary,q.question_image,q.interests,q.user_id,q.question_views,q.created_at,q.updated_at,(select count (*) from questions_likes l where l.questions_id = q.question_id) as question_likes, (select count (*) from questions_comments l where l.questions_id = q.question_id) as question_comments from questions q where interests like "%${data.interests}%" order by created_at DESC`;
+        let query = `select q.question_id,q.question_summary,q.question_image,q.interests,q.user_id,q.question_views,q.created_at,q.updated_at,u.full_name,u.designation,u.work_experience,u.email,u.mobile_no,u.profile_picture,u.fcm_token ,(select count (*) from questions_likes l where l.questions_id = q.question_id) as question_likes, (select count (*) from questions_comments l where l.questions_id = q.question_id) as question_comments,(SELECT click_user_id FROM questions_likes c where c.questions_id = q.question_id AND c.click_user_id=q.user_id) as liked_user from questions q inner join users u on u.user_id = q.user_id where q.interests like "%${data.interests}%" order by created_at DESC`;
+        
         return database.promise().query(query)
         }
     },
