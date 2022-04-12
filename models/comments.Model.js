@@ -25,8 +25,8 @@ const CommentsModel = {
         let query = QueryGenerator.insert('questions_comments',data) 
         return database.promise().query(query)
     },
-    async GetAnswer(data){
-        let query =`select * from questions_comments q inner join users u on q.user_id = u.user_id where q.questions_id = ${data}`
+    async GetAnswer(questions_id,user_id){
+        let query =`select  q.question_comment_id,q.user_id,q.questions_id,q.click_user_id,q.comment,q.created_at,q.updated_at,u.full_name,u.designation,u.work_experience,u.email,u.mobile_no,u.profile_picture,u.fcm_token,(SELECT click_user_id FROM questions_likes c where c.questions_id = q.questions_id AND c.click_user_id=${user_id}) as liked_user from questions_comments q inner join users u on u.user_id = q.user_id where q.questions_id = ${questions_id}`
         return database.promise().query(query)
     },
     async DeleteAnswer(data){

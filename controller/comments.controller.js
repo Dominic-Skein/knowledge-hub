@@ -121,8 +121,8 @@ async addAnswer(req,res){
 async getAnswer(req,res){
     try{
         let { questions_id } = req.query;
-
-        let getcomment = await commentsModal.GetAnswer(questions_id);
+        const user_id = req.user.user_id
+        let getcomment = await commentsModal.GetAnswer(questions_id,user_id);
         if(getcomment[0].length){
             new Response(res)._SuccessResponseWithData("Answer was fetched successfully....!",getcomment[0])
         }
