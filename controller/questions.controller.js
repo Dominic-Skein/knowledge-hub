@@ -57,7 +57,9 @@ async updateQuestion(req,res){
 async getQuestion(req,res){
     try{
     let { question_id,interests } = req.query;
-    let getQuestion = await QuestionsModal.GetQuestion(req.query);
+    const user_id = req.user.user_id
+    
+    let getQuestion = await QuestionsModal.GetQuestion(user_id,interests,question_id);
     if(getQuestion[0].length){
         new Response(res)._SuccessResponseWithData("Question was fetched successfully....!",getQuestion[0])
     }
@@ -115,10 +117,10 @@ async addQuestionLike(req,res){
         let { user_id,question_id,click_user_id }= req.body
         let add_question_Like = await QuestionsModal.AddQuestionLike(req.body); 
         if(add_question_Like[0].affectedRows){
-            new Response(res)._SuccessResponseWithoutData("Feed Like Added Successfully...");
+            new Response(res)._SuccessResponseWithoutData("question Like Added Successfully...");
         }
         else{
-            new Response(res)._ErrorMessage("Feed Like was Not created.....")
+            new Response(res)._ErrorMessage("question Like was Not created.....")
         }
     }
     catch(err){
