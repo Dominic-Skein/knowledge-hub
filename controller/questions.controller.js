@@ -57,6 +57,7 @@ async updateQuestion(req,res){
 async getQuestion(req,res){
     try{
     let { question_id,interests } = req.query;
+    console.log("get questions------------------>",interests)
     const user_id = req.user.user_id
     
     let getQuestion = await QuestionsModal.GetQuestion(user_id,interests,question_id);
@@ -115,6 +116,8 @@ async deleteQuestion(req,res){
 async addQuestionLike(req,res){
     try{
         let { user_id,question_id,click_user_id }= req.body
+        checkusrlike = await QuestionModel.checkQuestionLike(question_id,click_user_id)
+        console.log("checked user likeeeeee------------>",checkusrlike)
         let add_question_Like = await QuestionsModal.AddQuestionLike(req.body); 
         if(add_question_Like[0].affectedRows){
             new Response(res)._SuccessResponseWithoutData("question Like Added Successfully...");
@@ -136,10 +139,10 @@ async deleteQuestionLike(req,res){
         
         let questionlikedelete = await QuestionModel.DeleteQuestionLike(req.query);
         if(questionlikedelete[0].affectedRows){
-            new Response(res)._SuccessResponseWithoutData("Feed like was Deleted Successfully....!",)
+            new Response(res)._SuccessResponseWithoutData("Question like was Deleted Successfully....!",)
         }
         else{
-            new Response(res)._ErrorMessage("Feed like Was Not Deleted.....!")
+            new Response(res)._ErrorMessage("Questions like Was Not Deleted.....!")
         }
     }    
     catch(err){
