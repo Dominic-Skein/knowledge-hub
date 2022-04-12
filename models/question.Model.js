@@ -36,7 +36,7 @@ const QuestionModel = {
         return database.promise().query(query)
     },
     async DeleteQuestionLike(data){
-        let query = `delete from questions_likes where questions_like_id = ${data}`
+        let query = `delete from questions_likes where click_user_id = ${data.click_user_id} and question_id = ${data.question_id}`
         return database.promise().query(query)
     },
     async GetQuestionLike(data){

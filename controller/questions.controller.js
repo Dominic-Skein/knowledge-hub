@@ -132,9 +132,9 @@ async addQuestionLike(req,res){
 },
 async deleteQuestionLike(req,res){
     try{
-        let {question_like_id} = req.query;
+        let {question_id,click_user_id} = req.query;
         
-        let questionlikedelete = await QuestionModel.DeleteQuestionLike(question_like_id);
+        let questionlikedelete = await QuestionModel.DeleteQuestionLike(req.query);
         if(questionlikedelete[0].affectedRows){
             new Response(res)._SuccessResponseWithoutData("Feed like was Deleted Successfully....!",)
         }
