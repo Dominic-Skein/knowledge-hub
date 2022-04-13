@@ -1,7 +1,7 @@
 
 var jwt = require('jsonwebtoken')
 const { database } = require('../config/database')
-const UtilsModel = require("../models/utils.model");
+const ChatModel = require("../models/chat.Model");
 
 var io = require('socket.io')(process.env.SOCKET_PORT,
     {
@@ -31,6 +31,34 @@ io.use(function (socket, next) {
         next(new Error('Authentication error'));
     }
 })
+
+io.on('connect', function (socket) {
+    console.log("Connected");
+
+    socket.on('add-message' ,async function(data)  {
+        console.log("add-message============>",data)
+        data = JSON.parse(data)
+        let {user_id} = socket.decoded;
+        let document_id =socket.document_id;
+        let{chat,mapped_user_id} =data;
+        
+        let [documents] = await ChatModel.addMessage({
+            user_id, chat, mapped_user_id,chat_image
+        })
+    
+        // data = {
+        //     comment_id : "<comment_id_to_reply>", // optional
+        //     comment : "<user_comment>"
+        // }
+        // document.push(data)
+        ///insert 
+
+        console.log(socket.decoded , socket.document_id)
+
+        getDocumentComments( user_id, document_id);
+    })
+})
+
 
 // io.on('connect', function (socket) {
 //     console.log("Connected");
