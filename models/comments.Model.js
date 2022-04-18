@@ -14,8 +14,7 @@ const CommentsModel = {
     },
     async GetComment(data){
         let query = `select * from feed_comments c inner join users u on c.user_id = u.user_id where feed_id = ${data}`;
-        return database.promise().query(query)
-        
+        return database.promise().query(query)   
     },
     async DeleteComments(data){
         let query = `delete from feed_comments where feed_comment_id = ${data}`

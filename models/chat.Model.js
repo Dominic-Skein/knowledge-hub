@@ -8,7 +8,10 @@ async addMessage(doc) {
  return database.promise().query(query)
   },
 
-//async getMessage()  
+async getMessage(data){
+  let query = `select * from chat where user_id = ${data.user_id} and mapped_user_id = ${data.mapped_user_id}`;
+  return database.promise().query(query)
+}
 
 }
 module.exports = ChatModel;

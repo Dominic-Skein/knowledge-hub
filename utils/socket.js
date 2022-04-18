@@ -14,7 +14,7 @@ var io = require('socket.io')(process.env.SOCKET_PORT,
 )
 
 io.use(function (socket, next) {
-    console.log("socket io ========================>",socket.handshake.query.token)
+    console.log("socket io ========================>",socket.handshake.query)
     if (socket.handshake.query && socket.handshake.query.token && socket.handshake.query.user_id) {
         let user = jwt.decode(socket.handshake.query.token)
         
@@ -22,7 +22,6 @@ io.use(function (socket, next) {
         if (user) {
             socket.decoded = user;
             socket.mapped_user_id = socket.handshake.query.mapped_user_id;
-            console.log("socket.mapped_user_id"+socket.mapped_user_id);
             console.log("connection successs")
             next();
         }
@@ -36,23 +35,20 @@ io.use(function (socket, next) {
 })
 
 io.on('connect', function (socket) {
-    console.log("socket io connected successfully....!")
 
-    // var getChat = async function (user_id , mapped_user_id) {
+    var getChat = async function (user_id , mapped_user_id) {
 
-    //     console.log(user_id , mapped_user_id)
-    //     // let {user_id}=user;
-    //     // user_id + documnet_id
-    //    let  [getChat] = await ChatModel.getMessage({
-    //         user_id, mapped_user_id
-    //     })
-    // console.log("document======>",getChat);
-    // // if (document.insertId) {
-    //      io.emit('get-message', getChat);
-    //     // }
-    // }
+        console.log(user_id , mapped_user_id)
+ 
+       let  [getChat] = await ChatModel.getMessage({
+            user_id, mapped_user_id
+        })
+    // if (document.insertId) {
+         io.emit('get-message', getChat);
+        // }
+    }
 
-    //getChat(socket.decoded.user_id , socket.document_id);
+    getChat(socket.decoded.user_id , socket.mapped_user_id);
 
     socket.on('add-message' ,async function(data)  {
         console.log("add-message============>",data)
