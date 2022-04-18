@@ -21,4 +21,8 @@ router.use('/comments',CommentsRouter);
 var QuestionsRouter = require('./questions.routes')
 router.use('/questions',QuestionsRouter)
 
+//-----------------Chat routes---------------------//
+var ChatRouter = require('./chat.routes')
+router.use('/chats',ChatRouter);
+
 module.exports=router;
