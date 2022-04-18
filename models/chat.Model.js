@@ -3,10 +3,12 @@ const  database = require("../utils/database")
 
 const ChatModel = {
 async addMessage(doc) {
- 
-    // Query generator can generate a insert query based on object we passed
-    return await database.connection.promise().query(QueryGenerator.insert(`chat`, doc))
+
+ let query = QueryGenerator.insert('chat',doc) 
+ return database.promise().query(query)
   },
+
+//async getMessage()  
 
 }
 module.exports = ChatModel;
