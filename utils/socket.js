@@ -1,6 +1,6 @@
 
 var jwt = require('jsonwebtoken')
-const { database } = require('../config/database')
+const { database } = require('./database')
 const ChatModel = require("../models/chat.Model");
 
 var io = require('socket.io')(process.env.SOCKET_PORT,
@@ -14,9 +14,11 @@ var io = require('socket.io')(process.env.SOCKET_PORT,
 )
 
 io.use(function (socket, next) {
+    console.log("socket io ========================>",socket.handshake.query.token)
     if (socket.handshake.query && socket.handshake.query.token && socket.handshake.query.mapped_user_id) {
         let user = jwt.decode(socket.handshake.query.token)
         if (user) {
+            console.log("user------------>",user)
             socket.decoded = user;
             socket.mapped_user_id = socket.handshake.query.mapped_user_id;
             console.log("socket.mapped_user_id"+socket.mapped_user_id);
@@ -33,7 +35,7 @@ io.use(function (socket, next) {
 })
 
 io.on('connect', function (socket) {
-    console.log("Connected");
+    console.log("socket io connected successfully....!")
 
     var getChat = async function (user_id , mapped_user_id) {
 
