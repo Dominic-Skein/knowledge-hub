@@ -36,7 +36,8 @@ async gedFeed(req,res){
     const user_id = req.user.user_id
     
     let [getFeed] = await FeedsModel.GetFeed({ feed_id,interests,user_id});
-    
+    var get_Fed = [];
+        let data;
     getFeed.map((feed)=>{
         
         let feed_intrests = feed.interests.slice(1, -1)
@@ -45,24 +46,13 @@ async gedFeed(req,res){
         var num = 0;
         feed_int.filter((i)=>{
             get_int.filter((j)=>{
-                
-                console.log("number----------------->",num)
-                console.log("feed intres----------------->",i)
-                console.log("get interst----------------->",j)
-              
-            //    if(i === j){
-            //        console.log("comme if",getFeed)
-            //     return getFeed;
-            //    }
-            //    else{
-            //     console.log("comme else")
-            //     getFeed.length = null;
-            //     return
-            //    }
+                if(i===j){
+                    data = feed    
+                    get_Fed.push(data);
+                return get_Fed
+                }
             })
               
-        num++;
-            
         }
         
         )
@@ -70,21 +60,23 @@ async gedFeed(req,res){
     })
 
     if(page_no){
-        if(getFeed.length){
+        if(get_Fed.length){
             var n = page_no * 10
             var m = n+10
-            if(getFeed.length <= m){
-                m=getFeed.length
+            if(get_Fed.length <= m){
+                m=get_Fed.length
             }
             var array = []
             for(i=n; i<m; i++){
-                array.push(getFeed[i])
+                array.push(get_Fed[i])
             }
-            getFeed = array
+            get_Fed = array
         }
     }
-    if(getFeed.length){
-        new Response(res)._SuccessResponseWithData("Feed was fetched successfully....!",getFeed)
+
+
+    if(get_Fed.length){
+        new Response(res)._SuccessResponseWithData("Feed was fetched successfully....!",get_Fed)
     }
     else{
         new Response(res)._ErrorMessage("Feed was Fetched Failed...!")

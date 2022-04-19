@@ -73,15 +73,12 @@ async getQuestion(req,res){
                 data = question    
             get_Qus.push(data);
             return get_Qus
-           
-                }
+                }  
             })
         })
         
     })
-    
-
-    if(get_Qus){
+    if(get_Qus.length){
         new Response(res)._SuccessResponseWithData("Question was fetched successfully....!",get_Qus)
     }
     else{
