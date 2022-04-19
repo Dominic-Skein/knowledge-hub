@@ -9,7 +9,7 @@ async addMessage(doc) {
   },
 
 async getMessage(data){
-  let query = `select * from chat where user_id = ${data.user_id} and mapped_user_id = ${data.mapped_user_id}`;
+  let query = `select * from chat where user_id in (${data.user_id},${data.mapped_user_id}) and mapped_user_id in (${data.user_id},${data.mapped_user_id}) `;
   return database.promise().query(query)
 }
 

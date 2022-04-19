@@ -14,7 +14,7 @@ var io = require('socket.io')(process.env.SOCKET_PORT,
 )
 
 io.use(function (socket, next) {
-    console.log("socket io ========================>",socket.handshake.query)
+    console.log("socket io ========================>",socket.handshake.query.token)
     if (socket.handshake.query && socket.handshake.query.token && socket.handshake.query.user_id) {
         let user = jwt.decode(socket.handshake.query.token)
         
