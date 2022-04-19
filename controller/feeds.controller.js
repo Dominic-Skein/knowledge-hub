@@ -36,20 +36,36 @@ async gedFeed(req,res){
     const user_id = req.user.user_id
     
     let [getFeed] = await FeedsModel.GetFeed({ feed_id,interests,user_id});
+    
     getFeed.map((feed)=>{
         
         let feed_intrests = feed.interests.slice(1, -1)
         let feed_int = feed_intrests.split(","); 
         let get_int = interests.split(",");
-
+        var num = 0;
         feed_int.filter((i)=>{
             get_int.filter((j)=>{
-               if(i = j){
-                return getFeed;
-               }
+                
+                console.log("number----------------->",num)
+                console.log("feed intres----------------->",i)
+                console.log("get interst----------------->",j)
+              
+            //    if(i === j){
+            //        console.log("comme if",getFeed)
+            //     return getFeed;
+            //    }
+            //    else{
+            //     console.log("comme else")
+            //     getFeed.length = null;
+            //     return
+            //    }
             })
+              
+        num++;
             
-        })
+        }
+        
+        )
 
     })
 
