@@ -36,12 +36,9 @@ async gedFeed(req,res){
     const user_id = req.user.user_id
     
     let [getFeed] = await FeedsModel.GetFeed({ feed_id,interests,user_id});
-        var r
     getFeed.map((feed)=>{
         
-        //let feed_interests = []
         let feed_intrests = feed.interests.slice(1, -1)
-        
         let feed_int = feed_intrests.split(","); 
         let get_int = interests.split(",");
 
