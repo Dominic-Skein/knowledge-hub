@@ -56,28 +56,34 @@ async updateQuestion(req,res){
 },
 async getQuestion(req,res){
     try{
-    let { question_id,interests } = req.query;
+    let { question_id } = req.query;
+    let { interests } = req.query;
     const user_id = req.user.user_id
     
     let [getQuestion] = await QuestionsModal.GetQuestion(user_id,interests,question_id);
         var get_Qus = [];
         let data;
-    getQuestion.map((question)=>{
-        let question_interests = question.interests.slice(1,-1);
-        let question_int = question_interests.split(',');
-        let get_interests = interests.split(',');
-
-        question_int.map((i)=>{
-            get_interests.map((j)=>{
-                if(i===j){
-                data = question    
-            get_Qus.push(data);
-            return get_Qus
-                }  
+    if(interests){
+        getQuestion.map((question)=>{
+            let question_interests = question.interests.slice(1,-1);
+            let question_int = question_interests.split(',');
+            let get_interests = interests.split(',');        
+            
+            question_int.map((i)=>{
+                get_interests.map((j)=>{
+                    if(i===j){
+                    data = question    
+                get_Qus.push(data);
+                return get_Qus
+                    }  
+                })
             })
+            
         })
-        
-    })
+    }else if(question_id){
+        get_Qus = getQuestion;
+    }
+
     if(get_Qus.length){
         new Response(res)._SuccessResponseWithData("Question was fetched successfully....!",get_Qus)
     }
