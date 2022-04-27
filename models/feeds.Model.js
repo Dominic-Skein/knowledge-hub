@@ -6,7 +6,7 @@ const FeedsModel = {
         let query = QueryGenerator.insert('feeds',data) 
         return database.promise().query(query)
     },
-    async GetFeed({ feed_id,interests,user_id}){
+    async GetFeed({ feed_id,interests,user_id }){
 
         if(feed_id){
             
